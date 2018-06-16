@@ -9,7 +9,7 @@ scaling_factor =0.75
                 imglink=urllib.request.urlopen(url).read()
                 imgNp=np.array(bytearray(imglink.read(),dtype=np.uint8))
                 img = cv2.imdecode(imgNp,-1)
-                frame = cv2.resize(frame, None,fx=scaling_factor,fy=scaling_factor,interpolation=cv2.INTER_AREA)
+                frame = cv2.resize(img, None,fx=scaling_factor,fy=scaling_factor,interpolation=cv2.INTER_AREA)
                 face_rects = face_cascade.detectMultiScale(frame, 1.3, 2)
                 for (x,y,w,h) in face_rects:
                         cv2.rectangle(frame, (x,y), (x+w,y+h), (3400,1234,2500), 5)
