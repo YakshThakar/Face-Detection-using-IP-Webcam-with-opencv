@@ -3,6 +3,7 @@ import numpy as np
 import urllib.request
 
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_alt2.xml")
+#example url="192.168.0.12:8080/shot.jpg"
 url=""
 scaling_factor =0.75
         while True:
