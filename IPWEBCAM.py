@@ -6,7 +6,7 @@ face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_alt2.xml")
 url=""
 scaling_factor =0.75
         while True:
-                imglink=urllib.request.urlopen(url).read()
+                imglink=urllib.request.urlopen(url)
                 imgNp=np.array(bytearray(imglink.read(),dtype=np.uint8))
                 img = cv2.imdecode(imgNp,-1)
                 frame = cv2.resize(img, None,fx=scaling_factor,fy=scaling_factor,interpolation=cv2.INTER_AREA)
